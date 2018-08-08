@@ -3,7 +3,7 @@ import { Component } from "./index.js";
 
 export default class Example extends Component(HTMLElement) {
   static get observedAttributes() {
-    return ["name"];
+    return ["message"];
   }
 
   constructor() {

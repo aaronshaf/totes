@@ -49,7 +49,8 @@ export default class HelloWorld extends Component(HTMLElement) {
 - [ ] getDerivedStateFromProps
 - [x] render
 - [x] componentDidMount
-- [ ] shouldComponentUpdate
-- [ ] getSnapshotBeforeUpdate
-- [ ] componentWillUnmount
-- [ ] this.props.children
+- [x] shouldComponentUpdate
+- [x] getSnapshotBeforeUpdate
+- [x] component[Did]Unmount
+- [ ] this.props.children (use MutationObserver)
+- [ ] componentDidUpdate
