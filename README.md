@@ -17,12 +17,12 @@ This is currently a working proof of concept.
 
 ## Example
 
-### example.js
+### hello-world.js
 
 ```javascript
 import { Component } from "@aaronshaf/totes";
 
-export default class Example extends Component(HTMLElement) {
+export default class HelloWorld extends Component(HTMLElement) {
   constructor() {
     super();
     this.state = { clicked: false };
@@ -47,8 +47,8 @@ export default class Example extends Component(HTMLElement) {
 
 ```html
 <script type="module">
-  import Example from "./example.js";
-  customElements.define("totes-example", Example);
+  import HelloWorld from "./hello-world.js";
+  customElements.define("hello-world", Example);
 </script>
 
 <hello-world name="Aaron"></hello-world>
