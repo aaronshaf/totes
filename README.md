@@ -2,7 +2,7 @@
 
 React-like Components using lit-html.
 
-It is currently a working proof of concept.
+This is currently a working proof of concept.
 
 ## Roadmap
 
