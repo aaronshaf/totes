@@ -48,7 +48,7 @@ export default class HelloWorld extends Component(HTMLElement) {
 ```html
 <script type="module">
   import HelloWorld from "./hello-world.js";
-  customElements.define("hello-world", Example);
+  customElements.define("hello-world", HelloWorld);
 </script>
 
 <hello-world name="Aaron"></hello-world>
