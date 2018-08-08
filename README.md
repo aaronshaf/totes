@@ -29,9 +29,7 @@ export default class Example extends Component(HTMLElement) {
 
   constructor() {
     super();
-
     this.state = { clicked: false };
-
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -42,9 +40,7 @@ export default class Example extends Component(HTMLElement) {
   render() {
     return html`<div>
       <div>Hello, ${this.props.name}</div>
-
       <button on-click=${this.handleClick}>Click me</button>
-
       <div>${this.state.clicked ? "Clicked" : "Not clicked"}</div>
     </div>`;
   }
