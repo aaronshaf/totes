@@ -1,6 +1,6 @@
 # totes
 
-React-like Components using lit-html.
+React-like Components using custom elements and lit-html.
 
 This is currently a working proof of concept.
 

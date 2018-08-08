@@ -1,6 +1,6 @@
 {
   "name": "@aaronshaf/totes",
-  "description": "React-like Components using lit-html.",
+  "description": "React-like Components using custom elements and lit-html",
   "devDependencies": {
     "eslint": "^5.2.0",
     "eslint-config-prettier": "^2.9.0",
