@@ -4,17 +4,6 @@ React-like Components using custom elements and lit-html.
 
 This is currently a working proof of concept.
 
-## Roadmap
-
-- [x] setState
-- [ ] getDerivedStateFromProps
-- [x] render
-- [x] componentDidMount
-- [ ] shouldComponentUpdate
-- [ ] getSnapshotBeforeUpdate
-- [ ] componentWillUnmount
-- [ ] this.props.children
-
 ## Example
 
 ### hello-world.js
@@ -53,3 +42,14 @@ export default class HelloWorld extends Component(HTMLElement) {
 
 <hello-world name="Aaron"></hello-world>
 ```
+
+## Roadmap
+
+- [x] setState
+- [ ] getDerivedStateFromProps
+- [x] render
+- [x] componentDidMount
+- [ ] shouldComponentUpdate
+- [ ] getSnapshotBeforeUpdate
+- [ ] componentWillUnmount
+- [ ] this.props.children
