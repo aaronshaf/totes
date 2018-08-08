@@ -23,10 +23,6 @@ This is currently a working proof of concept.
 import { Component } from "@aaronshaf/totes";
 
 export default class Example extends Component(HTMLElement) {
-  static get observedAttributes() {
-    return ["name"];
-  }
-
   constructor() {
     super();
     this.state = { clicked: false };
