@@ -38,7 +38,7 @@ export const Component = elementClass =>
     }
 
     async invalidate() {
-      if (!this._needsRender) {
+      if (this._needsRender === false) {
         this._needsRender = true;
         this._needsRender = await false;
         this.renderCallback();
