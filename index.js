@@ -49,8 +49,3 @@ export const Component = elementClass =>
       render(this.render(this), this);
     }
   };
-
-// TODO: static getDerivedStateFromProps(props, state)
-// TODO: shouldComponentUpdate(nextProps, nextState)
-// TODO: getSnapshotBeforeUpdate(prevProps, prevState)
-// TODO: componentWillUnmount()
