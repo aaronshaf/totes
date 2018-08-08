@@ -10,7 +10,7 @@
     "eslint-plugin-standard": "^3.1.0",
     "prettier": "^1.14.0"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "repository": {
     "type": "git",
