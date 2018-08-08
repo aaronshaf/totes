@@ -1,0 +1,6 @@
+*.log
+node_modules
+NOTES.md
+WISHLIST.md
+TODO.md
+old.js
