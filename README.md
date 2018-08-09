@@ -1,6 +1,6 @@
 # totes
 
-React-like Components using custom elements. Works well with [lit-html](https://github.com/Polymer/lit-html).
+React-like components using custom elements. Works well with [lit-html](https://github.com/Polymer/lit-html).
 
 ## Installation
 
