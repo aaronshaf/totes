@@ -1,15 +1,6 @@
 # totes
 
-React-like Components using custom elements. Works well with [lit-html](https://github.com/Polymer/lit-html). Supports:
-
-- [x] setState
-- [x] render
-- [x] componentDidMount
-- [x] shouldComponentUpdate
-- [x] getSnapshotBeforeUpdate
-- [x] component[Did]Unmount
-- [x] componentDidUpdate
-- [x] getDerivedStateFromProps
+React-like Components using custom elements. Works well with [lit-html](https://github.com/Polymer/lit-html).
 
 ## Installation
 
@@ -58,6 +49,17 @@ export default class HelloWorld extends Component {
 
 <hello-world name="Aaron"></hello-world>
 ```
+
+## Supported methods
+
+- [x] setState
+- [x] render
+- [x] componentDidMount
+- [x] shouldComponentUpdate
+- [x] getSnapshotBeforeUpdate
+- [x] component[Did]Unmount
+- [x] componentDidUpdate
+- [x] getDerivedStateFromProps
 
 ## Roadmap
 
