@@ -74,5 +74,3 @@ export default class HelloWorld extends Component {
 - [x] componentDidUpdate
 - [x] getDerivedStateFromProps
 - [x] this.props.children
-
-## Roadmap
