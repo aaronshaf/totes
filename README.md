@@ -1,8 +1,6 @@
 # totes
 
-React-like Components using custom elements. Works well with [lit-html](https://github.com/Polymer/lit-html).
-
-This is currently a working proof of concept. Supports:
+React-like Components using custom elements. Works well with [lit-html](https://github.com/Polymer/lit-html). Supports:
 
 - [x] setState
 - [x] render
