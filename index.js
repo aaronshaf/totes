@@ -5,10 +5,10 @@ export default render => elementClass =>
   class extends elementClass {
     constructor() {
       super();
-      this.props = {};
-      for (let attr of this.attributes) {
-        this.props[attr.name] = attr.value;
-      }
+      this.props = Array.from(this.attributes).reduce((props, attr) => {
+        props[attr] = attr.value;
+        return props;
+      }, {});
       this._needsRender = false;
       this.setState = this.setState.bind(this);
     }
