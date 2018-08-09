@@ -52,10 +52,16 @@ export default class HelloWorld extends Component {
 
 ## Supported browsers
 
+- [x] Chrome (without polyfill)
 - [x] Firefox
-- [x] Chrome
 - [x] Safari
 - [x] Edge
+
+### Custom elements polyfill
+
+```html
+<script src="https://unpkg.com/@webcomponents/custom-elements@1.2.0/custom-elements.min.js"></script>
+```
 
 ## Supported methods
 
