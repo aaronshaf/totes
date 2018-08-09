@@ -8,7 +8,7 @@ React-like web components. Works well with [lit-html](https://github.com/Polymer
 yarn add lit-html@0.10.2 @aaronshaf/totes --prod
 ```
 
-## Quick start
+## Quick start (copy and paste)
 
 ```html
 <script type="module">
@@ -34,7 +34,7 @@ yarn add lit-html@0.10.2 @aaronshaf/totes --prod
 <hello-world name="Aaron"></hello-world>
 ```
 
-## But can it do... ?
+## But can it... ?
 
 Yes, it can.
 
