@@ -6,7 +6,7 @@ export default render => elementClass =>
     constructor() {
       super();
       this.props = Array.from(this.attributes).reduce((props, attr) => {
-        props[attr] = attr.value;
+        props[attr.name] = attr.value;
         return props;
       }, {});
       const _this = this;
