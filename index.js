@@ -1,6 +1,7 @@
-import { render } from "./vendor/lit-html/lib/lit-extended.js";
+// Copyright (c) 2018 Aaron Shafovaloff
+// https://github.com/aaronshaf/totes/blob/master/LICENSE
 
-export const Component = elementClass =>
+export default render => elementClass =>
   class extends elementClass {
     constructor() {
       super();
@@ -46,7 +47,7 @@ export const Component = elementClass =>
     }
 
     connectedCallback() {
-      // this.componentDidMount && this.componentDidMount();
+      this.componentDidMount && this.componentDidMount();
       this.invalidate();
     }
 

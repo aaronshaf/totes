@@ -1,7 +1,9 @@
-import { html } from "./vendor/lit-html/lib/lit-extended.js";
-import { Component } from "./index.js";
+import { html, render } from "https://unpkg.com/lit-html@0.10.2/lib/lit-extended.js";
+import totes from "./index.js";
 
-export default class Example extends Component(HTMLElement) {
+const Component = totes(render)(HTMLElement);
+
+export default class Example extends Component {
   static get observedAttributes() {
     return ["message"];
   }

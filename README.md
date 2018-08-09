@@ -1,17 +1,26 @@
 # totes
 
-React-like Components using custom elements and lit-html.
+React-like Components using custom elements. Works well with lit-html.
 
 This is currently a working proof of concept.
+
+## Installation
+
+```
+yarn add lit-html@0.10.2 @aaronshaf/totes --prod
+```
 
 ## Example
 
 ### hello-world.js
 
 ```javascript
-import { Component } from "@aaronshaf/totes";
+import { html, render } from "./node_modules/lit-html/lib/lit-extended.js";
+import totes from "node_modules/@aaronshaf/totes/index.js";
 
-export default class HelloWorld extends Component(HTMLElement) {
+const Component = totes(render)(HTMLElement);
+
+export default class HelloWorld extends Component {
   constructor() {
     super();
     this.state = { clicked: false };
