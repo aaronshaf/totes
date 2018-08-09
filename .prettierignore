@@ -1,1 +1,3 @@
 vendor/lit-html
+tests/vendor
+examples/vendor
