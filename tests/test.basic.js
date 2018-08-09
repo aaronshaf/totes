@@ -6,9 +6,7 @@ describe("BasicExample", () => {
   let node;
 
   beforeEach(() => {
-    if (node) {
-      node.remove();
-    }
+    node && node.remove();
     node = document.createElement("basic-example");
     node.setAttribute("message", "Hello,");
     workspace.appendChild(node);

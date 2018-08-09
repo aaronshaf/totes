@@ -50,6 +50,13 @@ export default class HelloWorld extends Component {
 <hello-world name="Aaron"></hello-world>
 ```
 
+## Supported browsers
+
+- [x] Firefox
+- [x] Chrome
+- [x] Safari
+- [ ] Edge (not tested yet)
+
 ## Supported methods
 
 - [x] setState
