@@ -2,7 +2,15 @@
 
 React-like Components using custom elements. Works well with [lit-html](https://github.com/Polymer/lit-html).
 
-This is currently a working proof of concept.
+This is currently a working proof of concept. Supports:
+
+- [x] setState
+- [x] render
+- [x] componentDidMount
+- [x] shouldComponentUpdate
+- [x] getSnapshotBeforeUpdate
+- [x] component[Did]Unmount
+- [x] componentDidUpdate
 
 ## Installation
 
@@ -54,12 +62,5 @@ export default class HelloWorld extends Component {
 
 ## Roadmap
 
-- [x] setState
-- [x] render
-- [x] componentDidMount
-- [x] shouldComponentUpdate
-- [x] getSnapshotBeforeUpdate
-- [x] component[Did]Unmount
-- [x] componentDidUpdate
 - [ ] getDerivedStateFromProps
 - [ ] this.props.children (use MutationObserver)
