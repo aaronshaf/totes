@@ -85,6 +85,10 @@ customElements.define("basic-example", BasicExample);
 <basic-example message="Hello"></basic-example>
 ```
 
+## Experiment on Glitch
+
+[totes-example](https://glitch.com/edit/#!/totes-example?path=hello-world.html:1:0)
+
 ## Supported browsers
 
 - [x] Chrome (without polyfill)
