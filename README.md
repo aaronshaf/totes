@@ -85,7 +85,7 @@ customElements.define("basic-example", BasicExample);
 <basic-example message="Hello"></basic-example>
 ```
 
-## Experiment on Glitch
+## Try it on Glitch
 
 [totes-example](https://glitch.com/edit/#!/totes-example?path=hello-world.html:1:0)
 
