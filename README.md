@@ -55,7 +55,7 @@ export default class HelloWorld extends Component {
 - [x] Firefox
 - [x] Chrome
 - [x] Safari
-- [ ] Edge (not tested yet)
+- [x] Edge
 
 ## Supported methods
 
