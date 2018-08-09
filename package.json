@@ -1,6 +1,6 @@
 {
   "name": "@aaronshaf/totes",
-  "description": "React-like components using custom elements and lit-html",
+  "description": "React-like web components",
   "files": [
     "index.js"
   ],

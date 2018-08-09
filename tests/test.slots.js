@@ -1,19 +1,20 @@
 import SlotsExample from "../examples/slots.js";
 
-customElements.define("basic-example", BasicExample);
+customElements.define("slots-example", SlotsExample);
 
-describe("BasicExample", () => {
+describe("SlotsExample", () => {
   let node;
 
   beforeEach(() => {
     node && node.remove();
-    node = document.createElement("basic-example");
-    node.setAttribute("message", "Hello,");
+    node = document.createElement("slots-example");
+    node.innerHTML = `<span>It works!</span>`;
+    // node.setAttribute("message", "Hello,");
     workspace.appendChild(node);
   });
 
   it("renders message", async () => {
-    expect(node.querySelector("p").textContent).to.equal("Hello, Aaron");
+    expect(node.querySelector("span").textContent).to.equal("It works!");
   });
 
   afterEach(() => {

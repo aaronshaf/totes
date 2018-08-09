@@ -1,6 +1,6 @@
 # totes
 
-React-like components using custom elements. Works well with [lit-html](https://github.com/Polymer/lit-html).
+React-like web components. Works well with [lit-html](https://github.com/Polymer/lit-html).
 
 ## Installation
 
@@ -57,13 +57,13 @@ export default class HelloWorld extends Component {
 - [x] Safari
 - [x] Edge
 
-### Custom elements polyfill
+### Custom elements / Shadow DOM polyfill
 
 ```html
-<script src="https://unpkg.com/@webcomponents/custom-elements@1.2.0/custom-elements.min.js"></script>
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.4/webcomponents-loader.js"></script>
 ```
 
-## Supported methods
+## Supported
 
 - [x] setState
 - [x] render
@@ -73,7 +73,6 @@ export default class HelloWorld extends Component {
 - [x] component[Did]Unmount
 - [x] componentDidUpdate
 - [x] getDerivedStateFromProps
+- [x] this.props.children
 
 ## Roadmap
-
-- [ ] this.props.children (use MutationObserver)

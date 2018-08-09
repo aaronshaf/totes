@@ -9,6 +9,12 @@ export default render => elementClass =>
         props[attr] = attr.value;
         return props;
       }, {});
+      const _this = this;
+      Object.defineProperty(this.props, "children", {
+        get() {
+          return Array.from(_this.childNodes);
+        }
+      });
       this._needsRender = false;
       this.setState = this.setState.bind(this);
     }
@@ -67,7 +73,7 @@ export default render => elementClass =>
 
     connectedCallback() {
       this.componentDidMount && this.componentDidMount();
-      render(this.render(this), this);
+      this._render();
     }
 
     disconnectedCallback() {
@@ -80,6 +86,15 @@ export default render => elementClass =>
       }
     }
 
+    _render() {
+      if (this.shadow === true) {
+        if (this.shadowRoot == null) {
+          this.attachShadow({ mode: "open" });
+        }
+      }
+      this.render && render(this.render(this), this.shadowRoot || this);
+    }
+
     async ensureRender(prevProps, prevState, callback) {
       if (this._needsRender === false) {
         this._needsRender = true;
@@ -88,7 +103,8 @@ export default render => elementClass =>
           this.componentDidUpdate && this.getSnapshotBeforeUpdate
             ? this.getSnapshotBeforeUpdate(prevProps, prevState)
             : null;
-        render(this.render(this), this);
+
+        this._render();
         if (this.componentDidUpdate) {
           this.componentDidUpdate(prevProps, prevState, snapshot);
         }

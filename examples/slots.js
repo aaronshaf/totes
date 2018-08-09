@@ -10,6 +10,7 @@ export default class SlotsExample extends Component {
 
   constructor() {
     super();
+    this.shadow = true;
     this.state = { name: "Aaron", toggled: false };
     this.handleInput = this.handleInput.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -25,21 +26,8 @@ export default class SlotsExample extends Component {
 
   render() {
     return html`<div>
-      <div>
-        <input
-          type="text"
-          value="Aaron"
-          autofocus
-          on-input=${this.handleInput}
-          placeholder="Your name"
-        />
-      </div>
-
-      <p>${this.props.message} ${this.state.name}</p>
-      
-      <button on-click=${this.handleClick}>
-        ${this.state.toggled ? "On" : "Off"}
-      </button>
+      <h1>Slots example</h1>
+      <slot>This should be replaced</slot>
     </div>`;
   }
 }
