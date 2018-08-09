@@ -1,6 +1,6 @@
 # totes
 
-React-like Components using custom elements. Works well with lit-html.
+React-like Components using custom elements. Works well with [lit-html](https://github.com/Polymer/lit-html).
 
 This is currently a working proof of concept.
 
@@ -16,7 +16,7 @@ yarn add lit-html@0.10.2 @aaronshaf/totes --prod
 
 ```javascript
 import { html, render } from "./node_modules/lit-html/lib/lit-extended.js";
-import totes from "node_modules/@aaronshaf/totes/index.js";
+import totes from "./node_modules/@aaronshaf/totes/index.js";
 
 const Component = totes(render)(HTMLElement);
 
