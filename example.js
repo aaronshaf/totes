@@ -16,7 +16,6 @@ export default class Example extends Component {
     this.state = { name: "Aaron", toggled: false };
     this.handleInput = this.handleInput.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    this.getSnapshotBeforeUpdate = this.getSnapshotBeforeUpdate.bind(this);
   }
 
   handleInput(event) {
