@@ -55,11 +55,11 @@ export default class HelloWorld extends Component {
 ## Roadmap
 
 - [x] setState
-- [ ] getDerivedStateFromProps
 - [x] render
 - [x] componentDidMount
 - [x] shouldComponentUpdate
 - [x] getSnapshotBeforeUpdate
 - [x] component[Did]Unmount
+- [x] componentDidUpdate
+- [ ] getDerivedStateFromProps
 - [ ] this.props.children (use MutationObserver)
-- [ ] componentDidUpdate

@@ -2,10 +2,6 @@
 # yarn lockfile v1
 
 
-"@aaronshaf/totes@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@aaronshaf/totes/-/totes-0.0.2.tgz#846c183653afd8aac2963e43a1c7cd799aeb1d36"
-
 acorn-jsx@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-4.1.1.tgz#e8e41e48ea2fe0c896740610ab6a4ffd8add225e"

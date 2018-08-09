@@ -21,8 +21,11 @@ export default render => elementClass =>
     }
 
     async maybeUpdate(nextProps, nextState) {
-      const didPropsChange = shallowDiffers(this.props, nextProps);
-      const didStateChange = shallowDiffers(this.state, nextState);
+      const prevProps = this.props;
+      const prevState = this.state;
+
+      const didPropsChange = shallowDiffers(prevProps, nextProps);
+      const didStateChange = shallowDiffers(prevState, nextState);
 
       const shouldInvalidate = this.shouldComponentUpdate
         ? this.shouldComponentUpdate(nextProps, nextState)
@@ -37,7 +40,7 @@ export default render => elementClass =>
       }
 
       if (shouldInvalidate) {
-        this.invalidate();
+        this.invalidate(prevProps, prevState);
       }
     }
 
@@ -48,7 +51,7 @@ export default render => elementClass =>
 
     connectedCallback() {
       this.componentDidMount && this.componentDidMount();
-      this.invalidate();
+      render(this.render(this), this);
     }
 
     disconnectedCallback() {
@@ -61,13 +64,18 @@ export default render => elementClass =>
       }
     }
 
-    async invalidate() {
+    async invalidate(prevProps, prevState) {
       if (this._needsRender === false) {
         this._needsRender = true;
         this._needsRender = await false;
-        this.getSnapshotBeforeUpdate && this.getSnapshotBeforeUpdate();
+        const snapshot =
+          this.componentDidUpdate && this.getSnapshotBeforeUpdate
+            ? this.getSnapshotBeforeUpdate(prevProps, prevState)
+            : null;
         render(this.render(this), this);
-        // TODO: this.componentDidUpdate(prevProps, prevState, snapshot)
+        if (this.componentDidUpdate) {
+          this.componentDidUpdate(prevProps, prevState, snapshot);
+        }
       }
     }
   };

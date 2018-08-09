@@ -1,4 +1,7 @@
-import { html, render } from "https://unpkg.com/lit-html@0.10.2/lib/lit-extended.js";
+import {
+  html,
+  render
+} from "https://unpkg.com/lit-html@0.10.2/lib/lit-extended.js";
 import totes from "./index.js";
 
 const Component = totes(render)(HTMLElement);
@@ -13,6 +16,7 @@ export default class Example extends Component {
     this.state = { name: "Aaron", toggled: false };
     this.handleInput = this.handleInput.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.getSnapshotBeforeUpdate = this.getSnapshotBeforeUpdate.bind(this);
   }
 
   handleInput(event) {
