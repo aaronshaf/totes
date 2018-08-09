@@ -17,17 +17,17 @@ export default render => elementClass =>
       const nextProps = Object.assign({}, this.props, {
         [name]: newValue
       });
-      this.maybeUpdate(nextProps, this.state);
+      this.maybeUpdate(nextProps, this.state, null);
     }
 
-    async maybeUpdate(nextProps, nextState) {
+    async maybeUpdate(nextProps, nextState, callback) {
       const prevProps = this.props;
       const prevState = this.state;
 
       const didPropsChange = shallowDiffers(prevProps, nextProps);
       const didStateChange = shallowDiffers(prevState, nextState);
 
-      const shouldInvalidate = this.shouldComponentUpdate
+      const shouldUpdate = this.shouldComponentUpdate
         ? this.shouldComponentUpdate(nextProps, nextState)
         : didPropsChange || didStateChange;
 
@@ -39,14 +39,30 @@ export default render => elementClass =>
         this.state = nextState;
       }
 
-      if (shouldInvalidate) {
-        this.invalidate(prevProps, prevState);
+      if (shouldUpdate === false) {
+        if (typeof callback === "function") {
+          callback(this.state);
+        }
+        return;
       }
+
+      if (this.getDerivedStateFromProps) {
+        const stateChange = this.getDerivedStateFromProps(
+          this.props,
+          this.state
+        );
+        if (stateChange !== null) {
+          this.setState(stateChange, callback);
+          return;
+        }
+      }
+
+      this.ensureRender(prevProps, prevState, callback);
     }
 
-    setState(delta) {
+    setState(delta, callback) {
       const nextState = Object.assign({}, this.state, delta);
-      this.maybeUpdate(this.props, nextState);
+      this.maybeUpdate(this.props, nextState, callback);
     }
 
     connectedCallback() {
@@ -64,7 +80,7 @@ export default render => elementClass =>
       }
     }
 
-    async invalidate(prevProps, prevState) {
+    async ensureRender(prevProps, prevState, callback) {
       if (this._needsRender === false) {
         this._needsRender = true;
         this._needsRender = await false;
@@ -76,6 +92,9 @@ export default render => elementClass =>
         if (this.componentDidUpdate) {
           this.componentDidUpdate(prevProps, prevState, snapshot);
         }
+      }
+      if (typeof callback === "function") {
+        callback(this.state);
       }
     }
   };

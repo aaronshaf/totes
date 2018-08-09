@@ -9,6 +9,7 @@ React-like Components using custom elements. Works well with [lit-html](https://
 - [x] getSnapshotBeforeUpdate
 - [x] component[Did]Unmount
 - [x] componentDidUpdate
+- [x] getDerivedStateFromProps
 
 ## Installation
 
@@ -60,5 +61,4 @@ export default class HelloWorld extends Component {
 
 ## Roadmap
 
-- [ ] getDerivedStateFromProps
 - [ ] this.props.children (use MutationObserver)
