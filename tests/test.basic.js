@@ -3,10 +3,14 @@ import BasicExample from "../examples/basic.js";
 customElements.define("basic-example", BasicExample);
 
 describe("BasicExample", () => {
-  const node = document.createElement("basic-example");
-  node.setAttribute("message", "Hello,");
+  let node;
 
-  before(() => {
+  beforeEach(() => {
+    if (node) {
+      node.remove();
+    }
+    node = document.createElement("basic-example");
+    node.setAttribute("message", "Hello,");
     workspace.appendChild(node);
   });
 
@@ -14,7 +18,7 @@ describe("BasicExample", () => {
     expect(node.querySelector("p").textContent).to.equal("Hello, Aaron");
   });
 
-  it("changes attribute", async () => {
+  it("changes input", async () => {
     const input = node.querySelector("input");
     input.value = "Stacie";
     input.dispatchEvent(new Event("input"));
@@ -22,7 +26,13 @@ describe("BasicExample", () => {
     expect(node.querySelector("p").textContent).to.equal("Hello, Stacie");
   });
 
-  after(() => {
+  it("changes attribute", async () => {
+    node.setAttribute("message", "Hi,");
+    await true;
+    expect(node.querySelector("p").textContent).to.equal("Hi, Aaron");
+  });
+
+  afterEach(() => {
     node.remove();
   });
 });
