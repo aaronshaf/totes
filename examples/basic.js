@@ -8,6 +8,10 @@ export default class BasicExample extends Component {
     return ["message"];
   }
 
+  static get observedProperties() {
+    return ["showExclamation"];
+  }
+
   constructor() {
     super();
     this.state = { name: "Aaron", toggled: false };
@@ -35,7 +39,7 @@ export default class BasicExample extends Component {
         />
       </div>
 
-      <p>${this.props.message} ${this.state.name}</p>
+      <p>${this.props.message} ${this.state.name}${this.props.showExclamation ? '?' : '!'}</p>
       
       <button on-click=${this.handleClick}>
         ${this.state.toggled ? "On" : "Off"}

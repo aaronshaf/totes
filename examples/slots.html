@@ -1,0 +1,19 @@
+<html>
+
+<head>
+  <title>slots example - totes</title>
+  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.4/webcomponents-loader.js"></script>
+</head>
+
+<body>
+  <script type="module">
+    import Example from "./slots.js";
+    customElements.define("totes-example", Example);
+  </script>
+
+  <totes-example>
+    <span>It works!</span>
+  </totes-example>
+</body>
+
+</html>

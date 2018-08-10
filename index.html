@@ -3,29 +3,21 @@
 <head>
   <title>totes</title>
   <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.4/webcomponents-loader.js"></script>
-  <style>
-    body {
-      padding: 12px 8px;
-      font-family: sans-serif;
-      font-size: 1.4rem;
-    }
-
-    input,
-    button {
-      font-size: 1.4rem;
-    }
-  </style>
 </head>
 
 <body>
   <h1>totes</h1>
 
-  <script type="module">
-    import Example from "./examples/basic.js";
-    customElements.define("totes-example", Example);
-  </script>
+  <h2>Examples</h2>
 
-  <totes-example message="View my source,"></totes-example>
+  <ul>
+    <li>
+      <a href="./examples/basic.html">Basic</a>
+    </li>
+    <li>
+      <a href="./examples/slots.html">Slots</a>
+    </li>
+  </ul>
 
   <!-- Github corner -->
   <a href="https://github.com/aaronshaf/totes" class="github-corner" aria-label="View source on Github">

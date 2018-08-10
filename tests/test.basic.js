@@ -13,7 +13,7 @@ describe("BasicExample", () => {
   });
 
   it("renders message", async () => {
-    expect(node.querySelector("p").textContent).to.equal("Hello, Aaron");
+    expect(node.querySelector("p").textContent).to.equal("Hello, Aaron!");
   });
 
   it("changes input", async () => {
@@ -21,13 +21,20 @@ describe("BasicExample", () => {
     input.value = "Stacie";
     input.dispatchEvent(new Event("input"));
     await true;
-    expect(node.querySelector("p").textContent).to.equal("Hello, Stacie");
+    expect(node.querySelector("p").textContent).to.equal("Hello, Stacie!");
   });
 
   it("changes attribute", async () => {
     node.setAttribute("message", "Hi,");
     await true;
-    expect(node.querySelector("p").textContent).to.equal("Hi, Aaron");
+    expect(node.querySelector("p").textContent).to.equal("Hi, Aaron!");
+  });
+
+  it("changes property", async () => {
+    expect(node.querySelector("p").textContent).to.equal("Hello, Aaron!");
+    node.showExclamation = true
+    await true;
+    expect(node.querySelector("p").textContent).to.equal("Hello, Aaron?");
   });
 
   afterEach(() => {
