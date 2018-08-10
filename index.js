@@ -15,6 +15,16 @@ export default render => elementClass =>
           return Array.from(_this.childNodes);
         }
       });
+      for (const name of (this.constructor.observedProperties || [])) {
+        Object.defineProperty(this, name, {
+          get() {
+            return this.props[name]
+          },
+          set(newValue) {
+            this.attributeChangedCallback(name, null, newValue)
+          }
+        })
+      }
       this._needsRender = false;
       this.setState = this.setState.bind(this);
     }
