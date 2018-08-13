@@ -15,7 +15,7 @@ export default render => elementClass =>
           return Array.from(_this.childNodes);
         }
       });
-      ;(this.constructor.observedProperties || []).forEach(name => {
+      (this.constructor.observedProperties || []).forEach(name => {
         Object.defineProperty(this, name, {
           get() {
             return this.props[name]
@@ -27,6 +27,7 @@ export default render => elementClass =>
       })
       this._needsRender = false;
       this.setState = this.setState.bind(this);
+      this.ensureShadow()
     }
 
     attributeChangedCallback(name, _oldValue, newValue) {
@@ -82,7 +83,8 @@ export default render => elementClass =>
     }
 
     async connectedCallback() {
-      await true
+      this.ensureShadow();
+      await true;
       this.componentDidMount && this.componentDidMount();
       this._render();
     }
@@ -97,12 +99,14 @@ export default render => elementClass =>
       }
     }
 
-    _render() {
-      if (this.shadow === true) {
-        if (this.shadowRoot == null) {
-          this.attachShadow({ mode: "open" });
-        }
+    ensureShadow() {
+      if (this.shadow === true && this.shadowRoot == null) {
+        this.attachShadow({ mode: "open" });
       }
+    }
+
+    _render() {
+      this.ensureShadow()
       this.render && render(this.render(this), this.shadowRoot || this);
     }
 

@@ -5,10 +5,11 @@ customElements.define("basic-example", BasicExample);
 describe("BasicExample", () => {
   let node;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     node && node.remove();
     node = document.createElement("basic-example");
     node.setAttribute("message", "Hello,");
+    await true
     workspace.appendChild(node);
   });
 
