@@ -81,7 +81,7 @@ export default render => elementClass =>
       this.maybeUpdate(this.props, nextState, callback);
     }
 
-    connectedCallback() {
+    async connectedCallback() {
       await true
       this.componentDidMount && this.componentDidMount();
       this._render();
