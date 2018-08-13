@@ -16,7 +16,7 @@ yarn add lit-html@0.10.2 @aaronshaf/totes --prod
     html,
     render
   } from "https://unpkg.com/lit-html@0.10.2/lib/lit-extended.js";
-  import totes from "https://unpkg.com/@aaronshaf/totes@0.0.9/index.js";
+  import totes from "https://unpkg.com/@aaronshaf/totes@0.0.14/index.js";
 
   const Component = totes(render)(HTMLElement);
 
