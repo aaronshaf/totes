@@ -15,7 +15,7 @@ export default render => elementClass =>
           return Array.from(_this.childNodes);
         }
       });
-      for (const name of (this.constructor.observedProperties || [])) {
+      ;(this.constructor.observedProperties || []).forEach(name => {
         Object.defineProperty(this, name, {
           get() {
             return this.props[name]
@@ -24,7 +24,7 @@ export default render => elementClass =>
             this.attributeChangedCallback(name, null, newValue)
           }
         })
-      }
+      })
       this._needsRender = false;
       this.setState = this.setState.bind(this);
     }
@@ -82,6 +82,7 @@ export default render => elementClass =>
     }
 
     connectedCallback() {
+      await true
       this.componentDidMount && this.componentDidMount();
       this._render();
     }
