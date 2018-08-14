@@ -18,16 +18,16 @@ export default render => elementClass =>
       (this.constructor.observedProperties || []).forEach(name => {
         Object.defineProperty(this, name, {
           get() {
-            return this.props[name]
+            return this.props[name];
           },
           set(newValue) {
-            this.attributeChangedCallback(name, null, newValue)
+            this.attributeChangedCallback(name, null, newValue);
           }
-        })
-      })
+        });
+      });
       this._needsRender = false;
       this.setState = this.setState.bind(this);
-      this.ensureShadow()
+      this.ensureShadow();
     }
 
     attributeChangedCallback(name, _oldValue, newValue) {
@@ -85,8 +85,10 @@ export default render => elementClass =>
     async connectedCallback() {
       this.ensureShadow();
       await true;
-      this.componentDidMount && this.componentDidMount();
       this._render();
+      if (this.componentDidMount) {
+        setTimeout(() => this.componentDidMount(), 0);
+      }
     }
 
     disconnectedCallback() {
@@ -106,8 +108,11 @@ export default render => elementClass =>
     }
 
     _render() {
-      this.ensureShadow()
-      this.render && render(this.render(this), this.shadowRoot || this);
+      this.ensureShadow();
+      const destination = this.shadowRoot || this;
+      if (this.render) {
+        render(this.render(this.props, this.state), destination);
+      }
     }
 
     async ensureRender(prevProps, prevState, callback) {
