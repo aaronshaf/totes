@@ -111,7 +111,14 @@ export default render => elementClass =>
       this.ensureShadow();
       const destination = this.shadowRoot || this;
       if (this.render) {
-        render(this.render(this.props, this.state), destination);
+        const result = this.render(this.props, this.state);
+        if (result) {
+          render(result, destination);
+        } else {
+          while (destination.firstChild) {
+            destination.removeChild(destination.firstChild);
+          }
+        }
       }
     }
 
