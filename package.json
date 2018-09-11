@@ -27,8 +27,5 @@
   "bugs": {
     "url": "https://github.com/aaronshaf/totes/issues"
   },
-  "homepage": "https://github.com/aaronshaf/totes#readme",
-  "dependencies": {
-    "lit-html": "^0.10.2"
-  }
+  "homepage": "https://github.com/aaronshaf/totes#readme"
 }
