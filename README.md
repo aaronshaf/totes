@@ -102,6 +102,14 @@ customElements.define("basic-example", BasicExample);
 <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.4/webcomponents-loader.js"></script>
 ```
 
+## Dev
+
+`git clone https://github.com/aaronshaf/totes.git`
+`yarn global add serve`
+`serve`
+
+That's it. No build steps.️ 🎵
+
 ## Heads up
 
 `lit-html` is undergoing a major change and its docs are [out of sync](https://github.com/Polymer/lit-html/issues/410). I will update/add more examples when it reaches 1.0.
