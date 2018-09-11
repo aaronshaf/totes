@@ -1,7 +1,7 @@
 import { html, render } from "./vendor/lit-html/lib/lit-extended.js";
 import totes from "../index.js";
 
-const Component = totes(render)(HTMLElement);
+const Component = totes(render);
 
 export default class BasicExample extends Component {
   static get observedAttributes() {

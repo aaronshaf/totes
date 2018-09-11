@@ -1,8 +1,8 @@
 // Copyright (c) 2018 Aaron Shafovaloff
 // https://github.com/aaronshaf/totes/blob/master/LICENSE
 
-export default render => elementClass =>
-  class extends elementClass {
+export default render => 
+  class extends HTMLElement {
     constructor() {
       super();
       this.props = Array.from(this.attributes).reduce((props, attr) => {
