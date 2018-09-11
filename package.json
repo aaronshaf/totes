@@ -4,9 +4,6 @@
   "files": [
     "index.js"
   ],
-  "peerDependencies": {
-    "lit-html": "^0.10.2"
-  },
   "devDependencies": {
     "eslint": "^5.2.0",
     "eslint-config-prettier": "^2.9.0",
