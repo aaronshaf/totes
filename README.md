@@ -17,7 +17,7 @@ Supports:
 ## Installation
 
 ```
-yarn add lit-html@0.10.2 @aaronshaf/totes --prod
+yarn add @aaronshaf/totes --prod
 ```
 
 ## Quick start (copy and paste)
