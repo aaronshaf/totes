@@ -105,7 +105,9 @@ customElements.define("basic-example", BasicExample);
 ## Dev
 
 `git clone https://github.com/aaronshaf/totes.git`
+
 `yarn global add serve`
+
 `serve`
 
 That's it. No build steps.️ 🎵
