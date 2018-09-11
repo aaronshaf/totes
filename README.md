@@ -2,6 +2,18 @@
 
 React-like web components. Works well with [lit-html](https://github.com/Polymer/lit-html).
 
+Supports:
+
+- [x] setState
+- [x] render
+- [x] componentDidMount
+- [x] shouldComponentUpdate
+- [x] getSnapshotBeforeUpdate
+- [x] component[Did]Unmount
+- [x] componentDidUpdate
+- [x] getDerivedStateFromProps
+- [x] this.props.children
+
 ## Installation
 
 ```
@@ -115,15 +127,3 @@ That's it. No build steps.️ 🎵
 ## Heads up
 
 `lit-html` is undergoing a major change and its docs are [out of sync](https://github.com/Polymer/lit-html/issues/410). I will update/add more examples when it reaches 1.0.
-
-## Supported
-
-- [x] setState
-- [x] render
-- [x] componentDidMount
-- [x] shouldComponentUpdate
-- [x] getSnapshotBeforeUpdate
-- [x] component[Did]Unmount
-- [x] componentDidUpdate
-- [x] getDerivedStateFromProps
-- [x] this.props.children
