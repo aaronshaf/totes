@@ -27,7 +27,7 @@ yarn add lit-html@0.10.2 @aaronshaf/totes --prod
   import {
     html,
     render
-  } from "https://unpkg.com/lit-html@0.10.2/lib/lit-extended.js";
+  } from "https://unpkg.com/lit-html@0.11/lit-html.js";
   import totes from "https://unpkg.com/@aaronshaf/totes@0/index.js";
 
   const Component = totes(render);
@@ -77,13 +77,13 @@ export default class BasicExample extends Component {
         <input
           type="text"
           value="Aaron"
-          on-input=${this.handleInput}
+          @input=${this.handleInput}
         />
       </div>
 
       <p>${this.props.message} ${this.state.name}</p>
 
-      <button on-click=${this.handleClick}>
+      <button @click=${this.handleClick}>
         ${this.state.toggled ? "On" : "Off"}
       </button>
     </div>`;
@@ -123,7 +123,3 @@ customElements.define("basic-example", BasicExample);
 `serve`
 
 That's it. No build steps.️ 🎵
-
-## Heads up
-
-`lit-html` is undergoing a major change and its docs are [out of sync](https://github.com/Polymer/lit-html/issues/410). I will update/add more examples when it reaches 1.0.

@@ -1,4 +1,4 @@
-import { html, render } from "./vendor/lit-html/lib/lit-extended.js";
+import { html, render } from "https://unpkg.com/lit-html@0.11/lit-html.js";
 import totes from "../index.js";
 
 const Component = totes(render);
@@ -34,14 +34,14 @@ export default class BasicExample extends Component {
           type="text"
           value="Aaron"
           autofocus
-          on-input=${this.handleInput}
+          @input=${this.handleInput}
           placeholder="Your name"
         />
       </div>
 
       <p>${this.props.message} ${this.state.name}${this.props.showExclamation ? '?' : '!'}</p>
       
-      <button on-click=${this.handleClick}>
+      <button @click=${this.handleClick}>
         ${this.state.toggled ? "On" : "Off"}
       </button>
     </div>`;

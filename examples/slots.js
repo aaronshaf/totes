@@ -1,4 +1,4 @@
-import { html, render } from "./vendor/lit-html/lib/lit-extended.js";
+import { html, render } from "https://unpkg.com/lit-html@0.11/lit-html.js";
 import totes from "../index.js";
 
 const Component = totes(render);
