@@ -24,10 +24,7 @@ yarn add lit-html@0.10.2 @aaronshaf/totes --prod
 
 ```html
 <script type="module">
-  import {
-    html,
-    render
-  } from "https://unpkg.com/lit-html@0.11/lit-html.js";
+  import { html, render } from "https://unpkg.com/lit-html@0.11/lit-html.js";
   import totes from "https://unpkg.com/@aaronshaf/totes@0/index.js";
 
   const Component = totes(render);
