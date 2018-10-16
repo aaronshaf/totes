@@ -34,6 +34,8 @@ Supports:
 <hello-world name="Aaron"></hello-world>
 ```
 
+That's it. No build steps.️ 🎵
+
 ## Example: setState and event handlers
 
 ```javascript
@@ -114,5 +116,3 @@ yarn add @aaronshaf/totes --prod
 `yarn global add serve`
 
 `serve`
-
-That's it. No build steps.️ 🎵
