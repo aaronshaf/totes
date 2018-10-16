@@ -1,6 +1,6 @@
 # totes
 
-React-like web components. Works well with [lit-html](https://github.com/Polymer/lit-html).
+React-like web components. Powered by [lit-html](https://github.com/Polymer/lit-html).
 
 Supports:
 
@@ -24,10 +24,7 @@ yarn add @aaronshaf/totes --prod
 
 ```html
 <script type="module">
-  import { html, render } from "https://unpkg.com/lit-html@0.11/lit-html.js";
-  import totes from "https://unpkg.com/@aaronshaf/totes@0/index.js";
-
-  const Component = totes(render);
+  import { html, Component } from "https://unpkg.com/@aaronshaf/totes@1/index.js";
 
   class HelloWorld extends Component {
     render() {
@@ -55,9 +52,10 @@ export default class BasicExample extends Component {
 
   constructor() {
     super();
-    this.state = { name: "Aaron", toggled: false };
-    this.handleInput = this.handleInput.bind(this);
-    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      name: "Aaron",
+      toggled: false
+    };
   }
 
   handleInput(event) {
@@ -108,7 +106,7 @@ customElements.define("basic-example", BasicExample);
 ### Custom elements / Shadow DOM polyfill
 
 ```html
-<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.4/webcomponents-loader.js"></script>
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
 ```
 
 ## Dev
