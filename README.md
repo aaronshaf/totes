@@ -34,9 +34,7 @@ Supports:
 <hello-world name="Aaron"></hello-world>
 ```
 
-## But can it... ?
-
-Yes, it can.
+## Example: setState and event handlers
 
 ```javascript
 export default class BasicExample extends Component {
