@@ -14,12 +14,6 @@ Supports:
 - [x] getDerivedStateFromProps
 - [x] this.props.children
 
-## Installation
-
-```
-yarn add @aaronshaf/totes --prod
-```
-
 ## Quick start (copy and paste)
 
 ```html
@@ -90,6 +84,12 @@ customElements.define("basic-example", BasicExample);
 
 ```html
 <basic-example message="Hello"></basic-example>
+```
+
+## Install from npm
+
+```
+yarn add @aaronshaf/totes --prod
 ```
 
 ## Try it on Glitch
