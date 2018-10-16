@@ -22,9 +22,7 @@ Supports:
 
   class HelloWorld extends Component {
     render() {
-      return html`<div>
-        <div>Hello, ${this.props.name}</div>
-      </div>`;
+      return html`<div>Hello, ${this.props.name}</div>`;
     }
   }
 
