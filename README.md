@@ -117,5 +117,5 @@ yarn add @aaronshaf/totes --prod
 
 ## See also
 
-- [html-router](https://github.com/aaronshaf/html-router) - drop-in html router
+- [html-router](https://github.com/aaronshaf/html-router) - drop-in router
 - [dem](https://github.com/aaronshaf/dem) - download ECMAScript modules
