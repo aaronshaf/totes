@@ -1,7 +1,10 @@
 // Copyright (c) 2018 Aaron Shafovaloff
 // https://github.com/aaronshaf/totes/blob/master/LICENSE
 
-import { html, render } from "https://unpkg.com/lit-html@0.12.0/lit-html.js";
+import {
+  html,
+  render
+} from "https://unpkg.com/lit-html-bundle@0.12.0/lit-html.min.js";
 
 export { html };
 
