@@ -114,3 +114,8 @@ yarn add @aaronshaf/totes --prod
 `yarn global add serve`
 
 `serve`
+
+## See also
+
+- [html-router](https://github.com/aaronshaf/html-router) - drop-in html router
+- [dem](https://github.com/aaronshaf/dem) - download ECMAScript modules
